@@ -1,20 +1,5 @@
 # Wirecard SEPA
-An implementation of the wirecard sepa interface for direct debit payments.
-
-
-## Installation
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'wirecard_sepa'
-```
-
-And then execute:
-    $ bundle
-
-Or install it yourself as:
-    $ gem install wirecard_sepa
-
+A WORK IN PROGRESS PROJECT
 
 ## Contributing
 1. Fork it ( https://github.com/betterplace/wirecard_sepa/fork )
