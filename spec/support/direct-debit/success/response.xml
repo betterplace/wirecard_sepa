@@ -1,0 +1,31 @@
+<payment xmlns="http://www.elastic-payments.com/schema/payment">
+  <merchant-account-id>eefc804c-f9d3-43a8-bd15-a1c92de10000</merchant-account-id>
+  <transaction-id>3971c2d8-250f-11e3-8d4b-005056a97162</transaction-id>
+  <request-id>7f55aacb-3e15-4185-b80f-1e0ad5b51d6c</request-id>
+  <transaction-type>debit</transaction-type>
+  <transaction-state>success</transaction-state>
+  <completion-time-stamp>2013-09-24T11:48:27.528Z</completion-time-stamp>
+  <statuses>
+    <status code="201.0000" description="The resource was successfully created." severity="information" />
+  </statuses>
+  <requested-amount currency="EUR">10.01</requested-amount>
+  <account-holder>
+    <first-name>John</first-name>
+    <last-name>Doe</last-name>
+  </account-holder>
+  <payment-methods>
+    <payment-method name="sepadirectdebit" />
+  </payment-methods>
+  <bank-account>
+    <iban>DE42512308000000060004</iban>
+    <bic>WIREDEMMXXX</bic>
+  </bank-account>
+  <mandate>
+    <mandate-id>12345678</mandate-id>
+    <signed-date>2013-09-24</signed-date>
+  </mandate>
+  <creditor-id>DE98ZZZ09999999999</creditor-id>
+  <due-date>2013-10-03</due-date>
+  <provider-transaction-reference-id>33F7A4D125</provider-transaction-reference-id>
+</payment>
+

@@ -1,0 +1,27 @@
+<payment xmlns="http://www.elastic-payments.com/schema/payment">
+  <merchant-account-id>eefc804c-f9d3-43a8-bd15-a1c92de10000</merchant-account-id>
+  <request-id>67366dbf-c68c-4f4e-a14b-69db83fbdd20</request-id>
+  <transaction-type>debit</transaction-type>
+  <requested-amount currency="EUR">20.02</requested-amount>
+  <account-holder>
+    <first-name>John</first-name>
+    <last-name>Doe</last-name>
+  </account-holder>
+  <payment-methods>
+    <payment-method name="sepadirectdebit" />
+  </payment-methods>
+  <bank-account>
+    <iban>DE42512308000000060004</iban>
+    <bic>WIREDEMMXXX</bic>
+  </bank-account>
+  <mandate>
+    <mandate-id>12345678</mandate-id>
+    <signed-date>2013-12-19</signed-date>
+  </mandate>
+  <creditor-id>DE98ZZZ09999999999</creditor-id>
+  <periodic>
+    <periodic-type>recurring</periodic-type>
+    <sequence-type>first</sequence-type>
+  </periodic>
+</payment>
+

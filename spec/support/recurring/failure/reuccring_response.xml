@@ -1,0 +1,33 @@
+<payment xmlns="http://www.elastic-payments.com/schema/payment">
+  <merchant-account-id>eefc804c-f9d3-43a8-bd15-a1c92de10000</merchant-account-id>
+  <transaction-id>5d21ee54-663d-11e3-a07b-18037336c0b3</transaction-id>
+  <request-id>05913099-b20e-4e2b-a8b0-e28fa9ea700c</request-id>
+  <transaction-type>debit</transaction-type>
+  <transaction-state>failed</transaction-state>
+  <completion-time-stamp>2013-12-19T10:32:21.000Z</completion-time-stamp>
+  <statuses>
+    <status code="400.1021" description=" No Parent Transaction Id.The Parent Transaction Id is required, and not provided." severity="error" />
+  </statuses>
+  <requested-amount currency="EUR">20.02</requested-amount>
+  <account-holder>
+    <first-name>John</first-name>
+    <last-name>Doe</last-name>
+  </account-holder>
+  <payment-methods>
+    <payment-method name="sepadirectdebit" />
+  </payment-methods>
+  <bank-account>
+    <iban />
+    <bic>WIREDEMMXXX</bic>
+  </bank-account>
+  <mandate>
+    <mandate-id>12345678</mandate-id>
+    <signed-date>2013-12-19</signed-date>
+  </mandate>
+  <creditor-id>DE98ZZZ09999999999</creditor-id>
+  <periodic>
+    <periodic-type>recurring</periodic-type>
+    <sequence-type>recurring</sequence-type>
+  </periodic>
+</payment>
+
