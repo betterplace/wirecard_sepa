@@ -5,7 +5,7 @@ require 'wirecard_sepa/response'
 require 'wirecard_sepa/gateway'
 
 module WirecardSepa
-  SANDBOX_URL = ''
+  SANDBOX_URL = 'https://api-test.wirecard.com/engine/rest/paymentmethods/'
   LIVE_URL    = ''
 
   def self.sandbox!
