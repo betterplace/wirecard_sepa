@@ -13,7 +13,7 @@ And then execute:
     $ bundle
 
 Or install it yourself as:
-    $ gem install wirecard_giropay
+    $ gem install wirecard_sepa
 
 
 ## Contributing
