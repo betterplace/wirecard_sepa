@@ -16,21 +16,21 @@ module WirecardSepa
     end
 
     def debit(params)
-      request  = DirectDebit::Request.new params.merge(config)
-      DirectDebit::Response.new post_request(request)
+      request = DirectDebit::Request.new params.merge(config)
+      DirectDebit::Response.new post(request)
     end
 
-    def init_recurring(params)
-      request = Recurring::FirstRequest.new params.merge(config)
-      Recurring::FirstResponse.new post_request(request)
+    def recurring_init(params)
+      # request = Recurring::FirstRequest.new params.merge(config)
+      # Recurring::FirstResponse.new post(request)
     end
 
-    def process_recurring(params)
-      request  = Recurring::RecurringRequest.new params.merge(config)
-      Recurring::RecurringResponse.new post_request(request)
+    def recurring_process(params)
+      # request = Recurring::RecurringRequest.new params.merge(config)
+      # Recurring::RecurringResponse.new post(request)
     end
 
-    def post_request(request)
+    def post(request)
       Typhoeus.post(
         WirecardSepa.gateway_url,
         body: request.to_xml,
@@ -41,6 +41,7 @@ module WirecardSepa
     private
 
     def http_auth_credentials
+      [config.http_auth_username, config.http_auth_password].join(':')
     end
   end
 end
