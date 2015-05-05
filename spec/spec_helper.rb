@@ -8,5 +8,8 @@ require 'byebug'
 #   add_group 'Libraries', '/lib/'
 # end
 # SimpleCov.start 'gem'
+def read_support_file(file_path)
+  File.read File.expand_path("../support/#{file_path}", __FILE__)
+end
 
 require 'wirecard_sepa'

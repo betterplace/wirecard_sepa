@@ -1,7 +1,12 @@
 require 'nokogiri'
 require 'wirecard_sepa/version'
-require 'wirecard_sepa/request'
-require 'wirecard_sepa/response'
+require 'wirecard_sepa/errors'
+require 'wirecard_sepa/direct-debit/request'
+require 'wirecard_sepa/direct-debit/response'
+require 'wirecard_sepa/recurring/first_request'
+require 'wirecard_sepa/recurring/first_response'
+require 'wirecard_sepa/recurring/recurring_request'
+require 'wirecard_sepa/recurring/recurring_response'
 require 'wirecard_sepa/gateway'
 
 module WirecardSepa

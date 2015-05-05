@@ -8,20 +8,16 @@
     <last-name>{{ACCOUNT_HOLDER_LAST_NAME}}</last-name>
   </account-holder>
   <payment-methods>
-    <payment-method name="sepadirectdebit" />
+    <payment-method name="sepadirectdebit"/>
   </payment-methods>
   <bank-account>
     <iban>{{BANK_ACCOUNT_IBAN}}</iban>
     <bic>{{BANK_ACCOUNT_BIC}}</bic>
   </bank-account>
-  <mandate>
+￼ <mandate>
     <mandate-id>{{MANDATE_ID}}</mandate-id>
     <signed-date>{{MANDATE_SIGNED_DATE}}</signed-date>
   </mandate>
   <creditor-id>{{CREDITOR_ID}}</creditor-id>
-  <periodic>
-    <periodic-type>recurring</periodic-type>
-    <sequence-type>first</sequence-type>
-  </periodic>
 </payment>
 
