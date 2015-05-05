@@ -1,6 +1,6 @@
 module WirecardSepa
-  class Response
-    def initialize
+  module Recurring
+    class RecurringResponse < DirectDebit::Response
     end
   end
 end
