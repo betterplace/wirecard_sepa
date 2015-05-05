@@ -19,34 +19,45 @@ module WirecardSepa
     end
 
     def debit(params)
-      request = DirectDebit::Request.new request_params(params)
-      DirectDebit::Response.new response_body_from_post(request), request: request
+      request_params = params.merge({
+        merchant_account_id: config[:merchant_account_id],
+        creditor_id: config[:creditor_id],
+        request_id: request_id,
+      })
+      request_xml = DirectDebit::Request.new(request_params).to_xml
+      response_xml = post(request_xml).body
+      DirectDebit::Response.new response_xml
     end
 
     def recurring_init(params)
-      request = Recurring::FirstRequest.new request_params(params)
-      Recurring::FirstResponse.new response_body_from_post(request), request: request
+      request_params = params.merge({
+        merchant_account_id: config[:merchant_account_id],
+        creditor_id: config[:creditor_id],
+        request_id: request_id,
+      })
+      request_xml = Recurring::FirstRequest.new(request_params).to_xml
+      response_xml = post(request_xml).body
+      Recurring::FirstResponse.new response_xml
     end
 
     def recurring_process(params)
-      request = Recurring::RecurringRequest.new request_params(params)
-      Recurring::RecurringResponse.new response_body_from_post(request), request: request
+      request_params = params.merge({
+        merchant_account_id: config[:merchant_account_id],
+        request_id: request_id,
+      })
+      request_xml = Recurring::RecurringRequest.new(request_params).to_xml
+      response_xml = post(request_xml).body
+      Recurring::RecurringResponse.new response_xml
     end
 
     private
 
-    def response_body_from_post(request)
+    def post(request_xml)
       Typhoeus.post(
         WirecardSepa.gateway_url,
-        body: request.to_xml,
+        body: request_xml,
         userpwd: http_auth_credentials,
-      ).body
-    end
-
-    def request_params(params)
-      params.merge(config.request_params).merge({
-        request_id: request_id
-      })
+      )
     end
 
     def request_id
