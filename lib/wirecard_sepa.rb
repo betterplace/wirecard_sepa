@@ -7,6 +7,7 @@ require 'wirecard_sepa/recurring/first_request'
 require 'wirecard_sepa/recurring/first_response'
 require 'wirecard_sepa/recurring/recurring_request'
 require 'wirecard_sepa/recurring/recurring_response'
+require 'wirecard_sepa/config'
 require 'wirecard_sepa/gateway'
 
 module WirecardSepa
