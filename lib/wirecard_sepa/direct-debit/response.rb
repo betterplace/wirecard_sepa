@@ -1,10 +1,11 @@
 module WirecardSepa
   module DirectDebit
     class Response
-      attr_reader :xml
+      attr_reader :xml, :request
 
-      def initialize(xml)
+      def initialize(xml, request: nil)
         @xml = xml
+        @request = request
       end
 
       def params

@@ -15,11 +15,11 @@ module WirecardSepa
   LIVE_URL    = ''
 
   def self.sandbox!
-    @sandboxed = true
+    @live = true
   end
 
   def self.sandboxed?
-    !!@sandboxed
+    !@live
   end
 
   def self.gateway_url

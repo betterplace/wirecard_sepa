@@ -11,7 +11,11 @@ module WirecardSepa
       def initialize(params = {})
         if params.keys.sort != EXPECTED_PARAMS.sort
           # TODO: Provide link to official wirecard spec which explains the use of the keys
-          raise Errors::InvalidParamsError.new("Please provide a hash exactly with the following keys: #{EXPECTED_PARAMS}")
+          raise Errors::InvalidParamsError.new(
+            "Please provide a hash exactly with the following keys: #{EXPECTED_PARAMS}\n" +
+            "Missing params: #{EXPECTED_PARAMS - params.keys}\n" +
+            "Unexpected params: #{params.keys - EXPECTED_PARAMS}"
+          )
         end
         @params = params
       end

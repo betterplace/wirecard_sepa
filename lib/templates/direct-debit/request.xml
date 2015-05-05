@@ -1,7 +1,7 @@
 <payment xmlns="http://www.elastic-payments.com/schema/payment">
   <merchant-account-id>{{MERCHANT_ACCOUNT_ID}}</merchant-account-id>
   <request-id>{{REQUEST_ID}}</request-id>
-  <transaction-type>debit</transaction-type>
+  <transaction-type>pending-debit</transaction-type>
   <requested-amount currency="EUR">{{REQUESTED_AMOUNT}}</requested-amount>
   <account-holder>
     <first-name>{{ACCOUNT_HOLDER_FIRST_NAME}}</first-name>

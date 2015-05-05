@@ -7,6 +7,15 @@ describe WirecardSepa::DirectDebit::Response do
   let(:success_response) { described_class.new success_xml }
   let(:failure_response) { described_class.new failure_xml }
 
+  describe '#initialize' do
+    let(:request) { double('Fake Request') }
+
+    it 'stores the request if given' do
+      response = described_class.new(success_xml, request: request)
+      expect(response.request).to eq request
+    end
+  end
+
   describe '#params' do
     context 'for a successful response' do
       let(:params) { success_response.params }
