@@ -24,8 +24,8 @@ module WirecardSepa
     end
 
     def recurring_init(params)
-      # request = Recurring::FirstRequest.new params.merge(config)
-      # Recurring::FirstResponse.new post(request)
+      request = Recurring::FirstRequest.new request_params(params)
+      Recurring::FirstResponse.new response_body_from_post(request), request: request
     end
 
     def recurring_process(params)
