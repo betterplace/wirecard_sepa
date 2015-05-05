@@ -1,4 +1,13 @@
 module WirecardSepa
+  # Usage:
+  # config = WirecardSepa::Config.new(...)
+  # gateway = WirecardSepa::Gateway.new(config)
+  #
+  # gateway.debit({ requested_amount: 12.12, .. })
+  # => response
+  #
+  # gateway.recurring_init
+  # => response
   class Gateway
     attr_accessor :config
 
