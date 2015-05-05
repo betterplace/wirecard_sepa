@@ -7,6 +7,7 @@ describe WirecardSepa::Recurring::RecurringRequest do
       merchant_account_id: 'eefc804c-f9d3-43a8-bd15-a1c92de10000',
       request_id: '55566dbf-c68c-4f4e-a14b-69db83fbd555',
       parent_transaction_id: 'e6604f91-663c-11e3-a07b-18037336c0b3',
+      creditor_id: 'DE98ZZZ09999999999',
     }
   end
 

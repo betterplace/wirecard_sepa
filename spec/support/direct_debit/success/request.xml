@@ -1,7 +1,7 @@
 <payment xmlns="http://www.elastic-payments.com/schema/payment">
   <merchant-account-id>eefc804c-f9d3-43a8-bd15-a1c92de10000</merchant-account-id>
   <request-id>7f55aacb-3e15-4185-b80f-1e0ad5b51d6c</request-id>
-  <transaction-type>debit</transaction-type>
+  <transaction-type>pending-debit</transaction-type>
   <requested-amount currency="EUR">10.01</requested-amount>
   <account-holder>
     <first-name>John</first-name>
