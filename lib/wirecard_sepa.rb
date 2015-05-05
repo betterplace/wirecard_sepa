@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'wirecard_sepa/version'
 require 'wirecard_sepa/errors'
+require 'wirecard_sepa/concerns/template_lookup'
 require 'wirecard_sepa/direct_debit/request'
 require 'wirecard_sepa/direct_debit/response'
 require 'wirecard_sepa/recurring/first_request'

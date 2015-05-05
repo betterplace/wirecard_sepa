@@ -1,6 +1,8 @@
 module WirecardSepa
   module DirectDebit
     class Request
+      include Concerns::TemplateLookup
+
       attr_reader :params
 
       def initialize(params = {})
@@ -29,17 +31,6 @@ module WirecardSepa
       end
 
       private
-
-      def template_path
-        File.expand_path "../../../templates/#{template_file}", __FILE__
-      end
-
-      def template_file
-        self.class.name.
-          gsub(/(.)([A-Z])/, '\1_\2').
-          gsub('::_', '/').
-          downcase + '.xml'
-      end
 
       def template_params
         params.each_with_object({}) { |(k,v), h| h["{{#{k.upcase}}}"] = v }
