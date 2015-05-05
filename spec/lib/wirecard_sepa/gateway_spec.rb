@@ -43,7 +43,7 @@ describe WirecardSepa::Gateway do
     it 'posts the correct XML' do
       response = gateway.recurring_init(params)
       # FIXME: For some reason wirecard always returns the following error:
-      # "The Request Identifier has not been provided.  Please check your input and try again."
+      # "The Request Identifier has not been provided. Please check your input and try again."
       # Status-Code: 400.1010
       # expect(response).to be_success
     end
@@ -57,7 +57,7 @@ describe WirecardSepa::Gateway do
     it 'posts the correct XML' do
       response = gateway.recurring_process(params)
       # FIXME: For some reason wirecard always returns the following error:
-      # "The Request Identifier has not been provided.  Please check your input and try again."
+      # "The Request Identifier has not been provided. Please check your input and try again."
       # Status-Code: 400.1010
       # expect(response).to be_success
     end
