@@ -16,6 +16,7 @@ module WirecardSepa
           status_code: status_code,
           status_description: status_description,
           due_date: due_date,
+          reference_id: provider_transaction_reference_id,
           original_response_xml: xml,
         }
       end
@@ -23,6 +24,8 @@ module WirecardSepa
       def success?
         status_code == '201.0000'
       end
+
+      private
 
       def transaction_id
         xml_doc.at_css('transaction-id').text
@@ -44,7 +47,9 @@ module WirecardSepa
         xml_doc.at_css('due-date').text
       end
 
-      private
+      def provider_transaction_reference_id
+        xml_doc.at_css('provider-transaction-reference-id').text
+      end
 
       def xml_doc
         @xml_doc ||= Nokogiri::XML xml

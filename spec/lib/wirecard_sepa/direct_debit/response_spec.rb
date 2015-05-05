@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe WirecardSepa::DirectDebit::Response do
-  let(:success_xml) { read_support_file('direct-debit/success/response.xml') }
-  let(:failure_xml) { read_support_file('direct-debit/failure/response.xml') }
+  let(:success_xml) { read_support_file('direct_debit/success/response.xml') }
+  let(:failure_xml) { read_support_file('direct_debit/failure/response.xml') }
 
   let(:success_response) { described_class.new success_xml }
   let(:failure_response) { described_class.new failure_xml }
@@ -25,6 +25,7 @@ describe WirecardSepa::DirectDebit::Response do
       it('params[:status_code]')        { expect(params[:status_code]).to eq '201.0000' }
       it('params[:status_description]') { expect(params[:status_description]).to eq 'The resource was successfully created.' }
       it('params[:due_date]')           { expect(params[:due_date]).to eq '2013-10-03' }
+      it('params[:reference_id]')       { expect(params[:reference_id]).to eq '33F7A4D125' }
     end
   end
 

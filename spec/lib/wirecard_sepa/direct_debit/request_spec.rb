@@ -27,7 +27,7 @@ describe WirecardSepa::DirectDebit::Request do
 
   describe '#to_xml' do
     it 'builds the correct xml' do
-      expected_xml = read_support_file('direct-debit/success/request.xml')
+      expected_xml = read_support_file('direct_debit/success/request.xml')
       expect(subject.to_xml).to eq expected_xml
     end
   end
