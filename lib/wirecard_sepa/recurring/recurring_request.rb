@@ -1,6 +1,6 @@
 module WirecardSepa
   module Recurring
-    class FirstRequest
+    class RecurringRequest
       TEMPLATE_PATH = File.expand_path('../../../templates/recurring/recurring_request.xml', __FILE__)
       REQUIRED_PARAMS = %i(
         merchant_account_id request_id requested_amount account_holder_first_name
