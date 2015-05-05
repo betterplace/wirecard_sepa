@@ -1,17 +1,17 @@
 module WirecardSepa
   module DirectDebit
     class Request
-      attr_reader :params
-
-      TEMPLATE_PATH = File.expand_path '../../../templates/direct-debit/request.xml', __FILE__
       EXPECTED_PARAMS = %i( merchant_account_id request_id requested_amount
         account_holder_first_name account_holder_last_name bank_account_iban
         bank_account_bic mandate_id mandate_signed_date creditor_id )
+      TEMPLATE_PATH = File.expand_path '../../../templates/direct-debit/request.xml', __FILE__
+
+      attr_reader :params
 
       def initialize(params = {})
         if params.keys.sort != EXPECTED_PARAMS.sort
           # TODO: Provide link to official wirecard spec which explains the use of the keys
-          raise Errors::InvalidParamsError.new("Please provide exactly the following keys: #{EXPECTED_PARAMS}")
+          raise Errors::InvalidParamsError.new("Please provide a hash exactly with the following keys: #{EXPECTED_PARAMS}")
         end
         @params = params
       end
