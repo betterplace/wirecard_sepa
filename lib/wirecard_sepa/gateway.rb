@@ -25,8 +25,7 @@ module WirecardSepa
         request_id: request_id,
       })
       request_xml = DirectDebit::Request.new(request_params).to_xml
-      response_xml = post(request_xml).body
-      DirectDebit::Response.new response_xml
+      DirectDebit::Response.for_request post(request_xml)
     end
 
     def recurring_init(params)
@@ -36,8 +35,7 @@ module WirecardSepa
         request_id: request_id,
       })
       request_xml = Recurring::FirstRequest.new(request_params).to_xml
-      response_xml = post(request_xml).body
-      Recurring::FirstResponse.new response_xml
+      Recurring::FirstResponse.for_request post(request_xml)
     end
 
     def recurring_process(params)
@@ -46,8 +44,7 @@ module WirecardSepa
         request_id: request_id,
       })
       request_xml = Recurring::RecurringRequest.new(request_params).to_xml
-      response_xml = post(request_xml).body
-      Recurring::RecurringResponse.new response_xml
+      Recurring::RecurringResponse.for_request post(request_xml)
     end
 
     private
@@ -66,7 +63,9 @@ module WirecardSepa
       # This is the identification number of the request on the merchants side.
       # It must be unique for each request.
       # Sample Request-ID: 048b27e0-9c31-4cab-9eab-3b72b1b4d498
-      SecureRandom.uuid
+      # SecureRandom.uuid
+      # SecureRandom.uuid
+      (SecureRandom.random_number * 10**15).to_i
     end
 
     def http_auth_credentials

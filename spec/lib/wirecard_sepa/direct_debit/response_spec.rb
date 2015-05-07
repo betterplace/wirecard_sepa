@@ -7,6 +7,19 @@ describe WirecardSepa::DirectDebit::Response do
   let(:success_response) { described_class.new success_xml }
   let(:failure_response) { described_class.new failure_xml }
 
+  describe '.for_request(request)' do
+    let(:request) { double('Fake Typhoeus request', body: '</xml>') }
+    let(:response) { described_class.for_request(request) }
+
+    it 'takes a uses the requests body to create a response' do
+      expect(response.xml).to eq '</xml>'
+    end
+
+    it 'stores the request object for debugging cases' do
+      expect(response.request).to eq request
+    end
+  end
+
   describe '#params' do
     context 'for a successful response' do
       let(:params) { success_response.params }
