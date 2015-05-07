@@ -1,8 +1,7 @@
 require 'spec_helper'
 
 describe WirecardSepa::Gateway do
-  let(:config)  { WirecardSepa::Config.for_sandbox }
-  let(:gateway) { described_class.new(config) }
+  let(:gateway) { described_class.new(sandbox_gateway_config) }
 
   describe '#debit(params)' do
     let(:params) do

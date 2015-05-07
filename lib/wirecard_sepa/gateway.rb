@@ -1,6 +1,3 @@
-require 'securerandom'
-require 'typhoeus'
-
 module WirecardSepa
   # Usage:
   # config = WirecardSepa::Config.new(...)
@@ -20,8 +17,8 @@ module WirecardSepa
 
     def debit(params)
       request_params = params.merge({
-        merchant_account_id: config[:merchant_account_id],
-        creditor_id: config[:creditor_id],
+        merchant_account_id: config.merchant_account_id,
+        creditor_id: config.creditor_id,
         request_id: request_id,
       })
       request_xml = DirectDebit::Request.new(request_params).to_xml
@@ -30,8 +27,8 @@ module WirecardSepa
 
     def recurring_init(params)
       request_params = params.merge({
-        merchant_account_id: config[:merchant_account_id],
-        creditor_id: config[:creditor_id],
+        merchant_account_id: config.merchant_account_id,
+        creditor_id: config.creditor_id,
         request_id: request_id,
       })
       request_xml = Recurring::FirstRequest.new(request_params).to_xml
@@ -40,7 +37,7 @@ module WirecardSepa
 
     def recurring_process(params)
       request_params = params.merge({
-        merchant_account_id: config[:merchant_account_id],
+        merchant_account_id: config.merchant_account_id,
         request_id: request_id,
       })
       request_xml = Recurring::RecurringRequest.new(request_params).to_xml
@@ -51,7 +48,7 @@ module WirecardSepa
 
     def post(request_xml)
       Typhoeus.post(
-        WirecardSepa.gateway_url,
+        config.api_url,
         body: request_xml,
         userpwd: http_auth_credentials,
       )

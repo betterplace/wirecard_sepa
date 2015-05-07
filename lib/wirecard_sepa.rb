@@ -1,4 +1,7 @@
+require 'securerandom'
+require 'typhoeus'
 require 'nokogiri'
+
 require 'wirecard_sepa/version'
 require 'wirecard_sepa/errors'
 require 'wirecard_sepa/utils/template'
@@ -13,18 +16,4 @@ require 'wirecard_sepa/config'
 require 'wirecard_sepa/gateway'
 
 module WirecardSepa
-  SANDBOX_URL = 'https://api-test.wirecard.com/engine/rest/paymentmethods/'
-  LIVE_URL    = ''
-
-  def self.sandbox!
-    @live = true
-  end
-
-  def self.sandboxed?
-    !@live
-  end
-
-  def self.gateway_url
-    sandboxed? ? SANDBOX_URL : LIVE_URL
-  end
 end
