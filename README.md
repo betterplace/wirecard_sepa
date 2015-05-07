@@ -4,6 +4,12 @@
 
 A WORK IN PROGRESS PROJECT
 
+## TODOS
+1. Error Handling
+1. Maybe cache template files (are they loaded from disk each request?)
+1. Docs for usage in README.md
+1. Check Recurring Request/Response
+
 ## Contributing
 1. Fork it ( https://github.com/betterplace/wirecard_sepa/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
