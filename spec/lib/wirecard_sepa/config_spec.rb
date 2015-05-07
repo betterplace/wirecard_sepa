@@ -12,14 +12,6 @@ describe WirecardSepa::Config do
     }
   end
 
-  describe '#initialize' do
-    it 'raises an Error when unexpected param keys are provided' do
-      expect {
-        described_class.new(valid_params.merge({ unexpected_key: 'foo' }))
-      }.to raise_error
-    end
-  end
-
   describe '#http_auth_username' do
     it 'returns the http auth username' do
       expect(config.http_auth_username).to eq 'alice'
