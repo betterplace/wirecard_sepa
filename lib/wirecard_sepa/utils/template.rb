@@ -8,7 +8,7 @@ module WirecardSepa
       end
 
       def to_xml
-        xml_template = File.read template_path
+        xml_template = File.open template_path, "r:UTF-8", &:read
         xml_template.gsub /{{\w+}}/, request_params
       end
 

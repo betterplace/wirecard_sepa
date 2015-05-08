@@ -9,7 +9,7 @@ require 'byebug'
 # end
 # SimpleCov.start 'gem'
 def read_support_file(file_path)
-  File.read File.expand_path("../support/#{file_path}", __FILE__)
+  File.open File.expand_path("../support/#{file_path}", __FILE__), "r:UTF-8", &:read
 end
 
 def sandbox_gateway_config
