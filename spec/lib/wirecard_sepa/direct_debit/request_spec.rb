@@ -30,5 +30,13 @@ describe WirecardSepa::DirectDebit::Request do
       expected_xml = read_support_file('direct_debit/success/request.xml')
       expect(subject.to_xml).to eq expected_xml
     end
+
+    it 'builds a valid request' do
+      xsd = Nokogiri::XML::Schema(read_support_file('payment.xsd'))
+      doc = Nokogiri::XML(subject.to_xml)
+
+      errors = xsd.validate(doc)
+      expect(errors).to be_empty
+    end
   end
 end
