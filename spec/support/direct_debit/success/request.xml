@@ -14,7 +14,7 @@
     <iban>DE42512308000000060004</iban>
     <bic>WIREDEMMXXX</bic>
   </bank-account>
-￼ <mandate>
+  <mandate>
     <mandate-id>12345678</mandate-id>
     <signed-date>2013-09-24</signed-date>
   </mandate>

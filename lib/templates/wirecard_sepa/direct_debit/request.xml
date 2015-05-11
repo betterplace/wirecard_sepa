@@ -14,7 +14,7 @@
     <iban>{{BANK_ACCOUNT_IBAN}}</iban>
     <bic>{{BANK_ACCOUNT_BIC}}</bic>
   </bank-account>
-￼ <mandate>
+  <mandate>
     <mandate-id>{{MANDATE_ID}}</mandate-id>
     <signed-date>{{MANDATE_SIGNED_DATE}}</signed-date>
   </mandate>
