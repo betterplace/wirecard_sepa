@@ -63,7 +63,7 @@ module WirecardSepa
       # Sample Request-ID: 048b27e0-9c31-4cab-9eab-3b72b1b4d498
       # SecureRandom.uuid
       # SecureRandom.uuid
-      (SecureRandom.random_number * 10**15).to_i
+      SecureRandom.uuid
     end
 
     def http_auth_credentials
