@@ -23,6 +23,7 @@ describe WirecardSepa::Gateway do
       # "The Request Identifier has not been provided.  Please check your input and try again."
       # Status-Code: 400.1010
       # expect(response).to be_success
+      expect(response.request.headers['Content-Type']).to eq 'application/xml;charset=UTF-8'
     end
   end
 

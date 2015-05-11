@@ -51,6 +51,7 @@ module WirecardSepa
         config.api_url,
         body: request_xml,
         userpwd: http_auth_credentials,
+        headers: { 'Content-Type' => 'application/xml' }
       )
     end
 
