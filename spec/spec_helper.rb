@@ -18,7 +18,7 @@ def sandbox_gateway_config
     http_auth_username:  '70000-APITEST-AP',
     http_auth_password:  'qD2wzQ_hrc!8',
     merchant_account_id: '4c901196-eff7-411e-82a3-5ef6b6860d64',
-    creditor_id:         'abcdef',
+    creditor_id:         'DE00000000000000000000',
   })
 end
 
