@@ -5,10 +5,10 @@
 A WORK IN PROGRESS PROJECT
 
 ## TODOS
-1. Error Handling
-1. Maybe cache template files (are they loaded from disk each request?)
-1. Docs for usage in README.md
-1. Check Recurring Request/Response
+- [ ] Error Handling
+- [ ] Maybe cache template files (are they loaded from disk each request?)
+- [ ] Docs for usage in README.md
+- [ ] Check Recurring Request/Response
 
 ## Contributing
 1. Fork it ( https://github.com/betterplace/wirecard_sepa/fork )
