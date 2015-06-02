@@ -1,5 +1,6 @@
 require 'simplecov'
 require 'byebug'
+require 'vcr'
 
 # FIXME
 # SimpleCov.adapters.define 'gem' do
@@ -20,6 +21,11 @@ def sandbox_gateway_config
     merchant_account_id: '4c901196-eff7-411e-82a3-5ef6b6860d64',
     creditor_id:         'DE00000000000000000000',
   })
+end
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/support/fixtures/vcr"
+  config.hook_into :typhoeus
 end
 
 require 'wirecard_sepa'
