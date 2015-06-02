@@ -30,30 +30,40 @@ module WirecardSepa
       end
 
       def transaction_id
-        xml_doc.at_css('transaction-id').text
+        value_at 'transaction-id'
       end
 
       def transaction_state
-        xml_doc.at_css('transaction-state').text
+        value_at 'transaction-state'
       end
 
       def status_code
-        xml_doc.at_css('status')[:code]
+        value_at 'status', attribute: :code
       end
 
       def status_description
-        xml_doc.at_css('status')[:description]
+        value_at 'status', attribute: :description
       end
 
       def due_date
-        xml_doc.at_css('due-date').text
+        value_at 'due-date'
       end
 
       def provider_transaction_reference_id
-        xml_doc.at_css('provider-transaction-reference-id').text
+        value_at 'provider-transaction-reference-id'
       end
 
       private
+
+      # Returns the text of a node with the given position. If
+      # an additional attribute is given, this attribute is returned
+      # instead.
+      # This method provides mainly nil-safeness.
+      def value_at(position, attribute: nil)
+        node = xml_doc.at_css(position)
+        node or return
+        attribute ? node[attribute] : node.text
+      end
 
       def xml_doc
         @xml_doc ||= Nokogiri::XML xml
