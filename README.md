@@ -8,10 +8,8 @@ Implements the client for creating payments in the Wircard Elastic Engine gatewa
 More info [here](doc/wirecard-payment-processing-api-1.13.pdf).
 
 ## TODOS
-- [ ] Error Handling
-- [ ] Maybe cache template files (are they loaded from disk each request?)
+- [x] Simple error handling
 - [ ] Docs for usage in README.md
-- [ ] Check Recurring Request/Response
 
 ## Contributing
 1. Fork it ( https://github.com/betterplace/wirecard_sepa/fork )
