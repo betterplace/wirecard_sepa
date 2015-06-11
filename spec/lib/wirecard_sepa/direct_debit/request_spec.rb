@@ -4,6 +4,7 @@ describe WirecardSepa::DirectDebit::Request do
   subject { described_class.new(params) }
   let(:params) do
     {
+      order_number: 666,
       merchant_account_id: 'eefc804c-f9d3-43a8-bd15-a1c92de10000',
       request_id: '7f55aacb-3e15-4185-b80f-1e0ad5b51d6c',
       requested_amount: '10.01',
@@ -34,7 +35,6 @@ describe WirecardSepa::DirectDebit::Request do
     it 'builds a valid request' do
       xsd = Nokogiri::XML::Schema(read_support_file('payment.xsd'))
       doc = Nokogiri::XML(subject.to_xml)
-
       errors = xsd.validate(doc)
       expect(errors).to be_empty
     end

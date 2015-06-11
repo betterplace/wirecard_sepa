@@ -27,6 +27,7 @@ http_interactions:
             <signed-date>2013-08-11</signed-date>
           </mandate>
           <creditor-id>DE00000000000000000000</creditor-id>
+          <order-number>666</order-number>
           <periodic>
             <periodic-type>recurring</periodic-type>
             <sequence-type>first</sequence-type>

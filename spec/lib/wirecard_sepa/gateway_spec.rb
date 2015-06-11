@@ -13,6 +13,7 @@ describe WirecardSepa::Gateway do
       bank_account_bic: 'WIREDEMMXXX',
       mandate_id: '1235678',
       mandate_signed_date: '2013-09-24',
+      order_number: 666,
     }
   end
   let(:recurring_init_params) do
@@ -24,6 +25,7 @@ describe WirecardSepa::Gateway do
       bank_account_bic: 'WIREDEMMXXX',
       mandate_id: '2356789',
       mandate_signed_date: '2013-08-11',
+      order_number: 666,
     }
   end
   THIRTY_DAYS_IN_SECONDS = 60 * 60 * 24 * 30

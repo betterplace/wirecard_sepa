@@ -14,6 +14,7 @@ describe WirecardSepa::Recurring::FirstRequest do
       mandate_id: '12345678',
       mandate_signed_date: '2013-12-19',
       creditor_id: 'DE98ZZZ09999999999',
+      order_number: 666,
     }
   end
 

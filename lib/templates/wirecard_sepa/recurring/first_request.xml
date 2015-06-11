@@ -7,6 +7,7 @@
     <first-name>{{ACCOUNT_HOLDER_FIRST_NAME}}</first-name>
     <last-name>{{ACCOUNT_HOLDER_LAST_NAME}}</last-name>
   </account-holder>
+  <order-number>{{ORDER_NUMBER}}</order-number>
   <payment-methods>
     <payment-method name="sepadirectdebit" />
   </payment-methods>

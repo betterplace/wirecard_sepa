@@ -27,6 +27,7 @@ http_interactions:
             <signed-date>2013-09-24</signed-date>
           </mandate>
           <creditor-id>DE00000000000000000000</creditor-id>
+          <order-number>666</order-number>
         </payment>
 
     headers:
