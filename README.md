@@ -31,7 +31,7 @@ response.success?
 
 ## TODOS
 - [x] Simple error handling
-- [ ] Docs for usage in README.md
+- [x] Docs for usage in README.md
 
 ## Contributing
 1. Fork it ( https://github.com/betterplace/wirecard_sepa/fork )
