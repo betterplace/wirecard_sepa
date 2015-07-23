@@ -19,6 +19,6 @@
     <mandate-id>{{MANDATE_ID}}</mandate-id>
     <signed-date>{{MANDATE_SIGNED_DATE}}</signed-date>
   </mandate>
-  <creditor-id>{{CREDITOR_ID}}</creditor-id>
+  <creditor-id>{{CREDITOR_ID}}</creditor-id>{{CUSTOM_FIELDS}}
 </payment>
 

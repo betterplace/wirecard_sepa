@@ -17,7 +17,9 @@ module WirecardSepa
       def expected_params
         %i( merchant_account_id request_id requested_amount
           account_holder_first_name account_holder_last_name bank_account_iban
-          bank_account_bic mandate_id mandate_signed_date creditor_id order_number )
+          bank_account_bic mandate_id mandate_signed_date creditor_id order_number
+          custom_fields
+        )
       end
     end
   end

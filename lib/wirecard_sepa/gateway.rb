@@ -16,21 +16,13 @@ module WirecardSepa
     end
 
     def debit(params)
-      request_params = params.merge({
-        merchant_account_id: config.merchant_account_id,
-        creditor_id: config.creditor_id,
-        request_id: request_id,
-      })
+      request_params = add_auth_params_and_custom_fields(params)
       request_xml = DirectDebit::Request.new(request_params).to_xml
       DirectDebit::Response.for_request post(request_xml)
     end
 
     def recurring_init(params)
-      request_params = params.merge({
-        merchant_account_id: config.merchant_account_id,
-        creditor_id: config.creditor_id,
-        request_id: request_id,
-      })
+      request_params = add_auth_params_and_custom_fields(params)
       request_xml = Recurring::FirstRequest.new(request_params).to_xml
       Recurring::FirstResponse.for_request post(request_xml)
     end
@@ -53,6 +45,14 @@ module WirecardSepa
         userpwd: http_auth_credentials,
         headers: { 'Content-Type' => 'application/xml' }
       )
+    end
+
+    def add_auth_params_and_custom_fields(params)
+      { custom_fields: {} }.merge(params).merge({
+        merchant_account_id: config.merchant_account_id,
+        creditor_id: config.creditor_id,
+        request_id: request_id
+      })
     end
 
     def request_id

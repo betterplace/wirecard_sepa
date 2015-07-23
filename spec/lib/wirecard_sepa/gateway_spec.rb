@@ -14,6 +14,9 @@ describe WirecardSepa::Gateway do
       mandate_id: '1235678',
       mandate_signed_date: '2013-09-24',
       order_number: 666,
+      custom_fields: {
+        'Company Name' => 'gut.org'
+      }
     }
   end
   let(:recurring_init_params) do

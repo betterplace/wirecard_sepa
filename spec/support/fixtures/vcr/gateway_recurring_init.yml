@@ -8,13 +8,14 @@ http_interactions:
       string: |+
         <payment xmlns="http://www.elastic-payments.com/schema/payment">
           <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
-          <request-id>4d760d12-0226-46e8-bc2c-7e6878e46914</request-id>
+          <request-id>e9bce48f-e4f0-47c7-8a19-5fdbea5174af</request-id>
           <transaction-type>debit</transaction-type>
           <requested-amount currency="EUR">15.00</requested-amount>
           <account-holder>
             <first-name>Bob</first-name>
             <last-name>Hawk</last-name>
           </account-holder>
+          <order-number>666</order-number>
           <payment-methods>
             <payment-method name="sepadirectdebit" />
           </payment-methods>
@@ -27,7 +28,6 @@ http_interactions:
             <signed-date>2013-08-11</signed-date>
           </mandate>
           <creditor-id>DE00000000000000000000</creditor-id>
-          <order-number>666</order-number>
           <periodic>
             <periodic-type>recurring</periodic-type>
             <sequence-type>first</sequence-type>
@@ -45,23 +45,23 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Tue, 02 Jun 2015 13:44:59 GMT
+      - Thu, 23 Jul 2015 10:27:30 GMT
       Content-Type:
       - application/xml;charset=UTF-8
       Content-Language:
       - en-US
       Content-Length:
-      - '1271'
+      - '1303'
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>8f9ed85e-092d-11e5-a7b4-005056a96a54</transaction-id><request-id>4d760d12-0226-46e8-bc2c-7e6878e46914</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-06-02T13:44:59.000Z</completion-time-stamp><statuses><status
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>6ca584a4-3125-11e5-b074-005056a96a54</transaction-id><request-id>e9bce48f-e4f0-47c7-8a19-5fdbea5174af</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-23T10:27:31.000Z</completion-time-stamp><statuses><status
         code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
-        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><payment-methods><payment-method
-        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-06-05</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>1FF4627884</provider-transaction-reference-id></payment>
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-28</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>93E3F9641A</provider-transaction-reference-id></payment>
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
-  recorded_at: Tue, 02 Jun 2015 13:44:59 GMT
+  recorded_at: Thu, 23 Jul 2015 10:27:31 GMT
 recorded_with: VCR 2.9.3
