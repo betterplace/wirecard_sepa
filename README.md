@@ -30,7 +30,7 @@ response.success?
 ```
 
 
-## Custom Fields
+### Feature: Custom Fields
 Beginning with version 0.0.5 the WirecardSepa::Gateway#debit method
 accepts a `custom_fields` param which forwards custom key-value pairs
 to the wirecard payment back end.
