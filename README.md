@@ -36,7 +36,7 @@ accepts a `custom_fields` param which forwards custom key-value pairs
 to the wirecard payment back end.
 
 Usage example:
-```
+```ruby
 response = gateway.debit({
   requested_amount: '12.12',
   account_holder_first_name: 'John',
