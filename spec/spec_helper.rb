@@ -32,7 +32,10 @@ VCR.configure do |config|
   config.default_cassette_options = {
     re_record_interval: cache_timeout,
     record: :new_episodes,
-    match_requests_on: [:method, :uri, :body],
+    # TODO: This currently leads to ALL requests being unique, since
+    # we set each time a separate request-id. This makes recording/replaying
+    # request pretty useless :)
+    # match_requests_on: [:method, :uri, :body],
   }
   config.cassette_library_dir = "spec/support/fixtures/vcr"
   config.allow_http_connections_when_no_cassette = true
