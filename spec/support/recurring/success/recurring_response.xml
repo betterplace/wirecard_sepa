@@ -16,6 +16,7 @@
   <payment-methods>
     <payment-method name="sepadirectdebit" />
   </payment-methods>
+  <order-number>12346</order-number>
   <bank-account>
     <iban>DE42512308000000060004</iban>
     <bic>WIREDEMMXXX</bic>
