@@ -29,6 +29,29 @@ response.success?
 => true
 ```
 
+
+## Custom Fields
+Beginning with version 0.0.5 the WirecardSepa::Gateway#debit method
+accepts a `custom_fields` param which forwards custom key-value pairs
+to the wirecard payment back end.
+
+Usage example:
+```
+response = gateway.debit({
+  requested_amount: '12.12',
+  account_holder_first_name: 'John',
+  account_holder_last_name: 'Doe',
+  bank_account_iban: 'DE42512308000000060004',
+  bank_account_bic: 'WIREDEMMXXX',
+  mandate_id: '1235678',
+  mandate_signed_date: '2015-06-02',
+  custom_fields: {
+    'Banana' => 'tree',
+    'Department' => 'IT',
+  }
+})
+```
+
 ## TODOS
 - [x] Simple error handling
 - [x] Docs for usage in README.md
