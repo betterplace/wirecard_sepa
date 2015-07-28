@@ -8,7 +8,7 @@ http_interactions:
       string: |+
         <payment xmlns="http://www.elastic-payments.com/schema/payment">
           <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
-          <request-id>483bda96-7ef4-4fd0-8142-016238d96b3c</request-id>
+          <request-id>24c99a63-86de-4ae5-bc0b-54d59baef94f</request-id>
           <transaction-type>pending-debit</transaction-type>
           <requested-amount currency="EUR">12.12</requested-amount>
           <account-holder>
@@ -16,6 +16,9 @@ http_interactions:
             <last-name>Doe</last-name>
           </account-holder>
           <order-number>666</order-number>
+          <custom-fields>
+            <custom-field field-name="Company Name" field-value="gut.org"/>
+          </custom-fields>
           <payment-methods>
             <payment-method name="sepadirectdebit"/>
           </payment-methods>
@@ -28,9 +31,6 @@ http_interactions:
             <signed-date>2013-09-24</signed-date>
           </mandate>
           <creditor-id>DE00000000000000000000</creditor-id>
-          <custom-fields>
-            <custom-field field-name="Company Name" field-value="gut.org"/>
-          </custom-fields>
         </payment>
 
     headers:
@@ -44,7 +44,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Thu, 23 Jul 2015 11:34:18 GMT
+      - Tue, 28 Jul 2015 09:49:15 GMT
       Content-Type:
       - application/xml;charset=UTF-8
       Content-Language:
@@ -55,13 +55,13 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>c0e42c88-312e-11e5-b074-005056a96a54</transaction-id><request-id>483bda96-7ef4-4fd0-8142-016238d96b3c</request-id><transaction-type>pending-debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-23T11:34:18.000Z</completion-time-stamp><statuses><status
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>e85f5aac-350d-11e5-b074-005056a96a54</transaction-id><request-id>24c99a63-86de-4ae5-bc0b-54d59baef94f</request-id><transaction-type>pending-debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T09:49:15.000Z</completion-time-stamp><statuses><status
         code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
         currency="EUR">12.12</requested-amount><account-holder><first-name>John</first-name><last-name>Doe</last-name></account-holder><order-number>666</order-number><custom-fields><custom-field
         field-name="Company Name" field-value="gut.org"></custom-field></custom-fields><payment-methods><payment-method
-        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>1235678</mandate-id><signed-date>2013-09-24</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-28</due-date><provider-transaction-reference-id>F7834EC634</provider-transaction-reference-id></payment>
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>1235678</mandate-id><signed-date>2013-09-24</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><provider-transaction-reference-id>2C7E9C6B88</provider-transaction-reference-id></payment>
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
-  recorded_at: Thu, 23 Jul 2015 11:34:18 GMT
+  recorded_at: Tue, 28 Jul 2015 09:49:15 GMT
 recorded_with: VCR 2.9.3

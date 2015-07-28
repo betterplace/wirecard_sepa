@@ -27,13 +27,11 @@ describe WirecardSepa::DirectDebit::Request do
       expect(subject.to_xml).to eq expected_xml
     end
 
-    # FIXME: The current XSD does not validate this XML even though
-    # the actual API endpoint accepts this request.
-    # it 'builds a valid request' do
-    #   xsd = Nokogiri::XML::Schema(read_support_file('payment.xsd'))
-    #   doc = Nokogiri::XML(subject.to_xml)
-    #   errors = xsd.validate(doc)
-    #   expect(errors).to be_empty
-    # end
+    it 'builds a valid request' do
+      xsd    = Nokogiri::XML::Schema(read_support_file('payment.xsd'))
+      doc    = Nokogiri::XML(subject.to_xml)
+      errors = xsd.validate(doc)
+      expect(errors).to be_empty
+    end
   end
 end

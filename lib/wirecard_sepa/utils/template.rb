@@ -42,8 +42,7 @@ module WirecardSepa
         fields_xml = custom_fields.map do |k,v|
           "  <custom-field field-name=\"#{k}\" field-value=\"#{v}\"/>\n"
         end.join.to_s
-        "\n" +
-        '  <custom-fields>' "\n" +
+        '<custom-fields>' "\n" +
         "  #{fields_xml}" +
         '  </custom-fields>'
       end

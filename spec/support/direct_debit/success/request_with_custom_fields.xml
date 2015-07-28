@@ -8,6 +8,9 @@
     <last-name>Doe</last-name>
   </account-holder>
   <order-number>666</order-number>
+  <custom-fields>
+    <custom-field field-name="Company Name" field-value="gut.org"/>
+  </custom-fields>
   <payment-methods>
     <payment-method name="sepadirectdebit"/>
   </payment-methods>
@@ -20,8 +23,5 @@
     <signed-date>2013-09-24</signed-date>
   </mandate>
   <creditor-id>DE98ZZZ09999999999</creditor-id>
-  <custom-fields>
-    <custom-field field-name="Company Name" field-value="gut.org"/>
-  </custom-fields>
 </payment>
 

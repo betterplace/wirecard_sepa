@@ -24,6 +24,14 @@ def sandbox_gateway_config
 end
 
 VCR.configure do |config|
+  cache_timeout = if ENV['CACHE'] == '0'
+                    1
+                  else
+                    THIRTY_DAYS_IN_SECONDS = 60 * 60 * 24 * 30
+                  end
+  config.default_cassette_options = {
+    re_record_interval: cache_timeout
+  }
   config.cassette_library_dir = "spec/support/fixtures/vcr"
   config.hook_into :typhoeus
 end

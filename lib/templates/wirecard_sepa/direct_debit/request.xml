@@ -8,6 +8,7 @@
     <last-name>{{ACCOUNT_HOLDER_LAST_NAME}}</last-name>
   </account-holder>
   <order-number>{{ORDER_NUMBER}}</order-number>
+  {{CUSTOM_FIELDS}}
   <payment-methods>
     <payment-method name="sepadirectdebit"/>
   </payment-methods>
@@ -19,6 +20,6 @@
     <mandate-id>{{MANDATE_ID}}</mandate-id>
     <signed-date>{{MANDATE_SIGNED_DATE}}</signed-date>
   </mandate>
-  <creditor-id>{{CREDITOR_ID}}</creditor-id>{{CUSTOM_FIELDS}}
+  <creditor-id>{{CREDITOR_ID}}</creditor-id>
 </payment>
 
