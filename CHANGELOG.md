@@ -1,3 +1,7 @@
+## [0.1.0] - 2015-08-05
+### Changed
+- order_number is now a required parameter for recurring requests
+
 ## [0.0.5] - 2015-07-28
 ### Changed
 - Adds custom_fields feature for sepa payments. Have a look at the README.md for more details.
