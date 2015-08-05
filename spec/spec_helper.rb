@@ -30,9 +30,15 @@ VCR.configure do |config|
                     THIRTY_DAYS_IN_SECONDS = 60 * 60 * 24 * 30
                   end
   config.default_cassette_options = {
-    re_record_interval: cache_timeout
+    re_record_interval: cache_timeout,
+    record: :new_episodes,
+    # TODO: This currently leads to ALL requests being unique, since
+    # we set each time a separate request-id. This makes recording/replaying
+    # request pretty useless :)
+    # match_requests_on: [:method, :uri, :body],
   }
   config.cassette_library_dir = "spec/support/fixtures/vcr"
+  config.allow_http_connections_when_no_cassette = true
   config.hook_into :typhoeus
 end
 

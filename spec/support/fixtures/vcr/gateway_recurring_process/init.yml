@@ -64,4 +64,709 @@ http_interactions:
     adapter_metadata:
       effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
   recorded_at: Tue, 28 Jul 2015 09:49:16 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>c5b84aee-f3fc-4d66-bfc7-78b31d6aeaa7</request-id>
+          <transaction-type>debit</transaction-type>
+          <requested-amount currency="EUR">15.00</requested-amount>
+          <account-holder>
+            <first-name>Bob</first-name>
+            <last-name>Hawk</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <payment-methods>
+            <payment-method name="sepadirectdebit" />
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>2356789</mandate-id>
+            <signed-date>2013-08-11</signed-date>
+          </mandate>
+          <creditor-id>DE00000000000000000000</creditor-id>
+          <periodic>
+            <periodic-type>recurring</periodic-type>
+            <sequence-type>first</sequence-type>
+          </periodic>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 13:40:50 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1303'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>42605892-352e-11e5-b074-005056a96a54</transaction-id><request-id>c5b84aee-f3fc-4d66-bfc7-78b31d6aeaa7</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T13:40:50.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>BF1502EA37</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Tue, 28 Jul 2015 13:40:51 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>5e9d7780-1902-4ef1-af74-ac2baed59de3</request-id>
+          <transaction-type>debit</transaction-type>
+          <requested-amount currency="EUR">15.00</requested-amount>
+          <account-holder>
+            <first-name>Bob</first-name>
+            <last-name>Hawk</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <payment-methods>
+            <payment-method name="sepadirectdebit" />
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>2356789</mandate-id>
+            <signed-date>2013-08-11</signed-date>
+          </mandate>
+          <creditor-id>DE00000000000000000000</creditor-id>
+          <periodic>
+            <periodic-type>recurring</periodic-type>
+            <sequence-type>first</sequence-type>
+          </periodic>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 14:09:33 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1303'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>4576ae38-3532-11e5-b074-005056a96a54</transaction-id><request-id>5e9d7780-1902-4ef1-af74-ac2baed59de3</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T14:09:33.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>91FEFB9406</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Tue, 28 Jul 2015 14:09:34 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>ad4c864f-a185-4589-8719-3b6113bf8399</request-id>
+          <transaction-type>debit</transaction-type>
+          <requested-amount currency="EUR">15.00</requested-amount>
+          <account-holder>
+            <first-name>Bob</first-name>
+            <last-name>Hawk</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <payment-methods>
+            <payment-method name="sepadirectdebit" />
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>2356789</mandate-id>
+            <signed-date>2013-08-11</signed-date>
+          </mandate>
+          <creditor-id>DE00000000000000000000</creditor-id>
+          <periodic>
+            <periodic-type>recurring</periodic-type>
+            <sequence-type>first</sequence-type>
+          </periodic>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 14:09:53 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1303'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>511a3624-3532-11e5-b074-005056a96a54</transaction-id><request-id>ad4c864f-a185-4589-8719-3b6113bf8399</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T14:09:53.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>2818CD6BE0</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Tue, 28 Jul 2015 14:09:53 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>801dce0a-c18c-4327-b88a-00663b1bc37f</request-id>
+          <transaction-type>debit</transaction-type>
+          <requested-amount currency="EUR">15.00</requested-amount>
+          <account-holder>
+            <first-name>Bob</first-name>
+            <last-name>Hawk</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <payment-methods>
+            <payment-method name="sepadirectdebit" />
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>2356789</mandate-id>
+            <signed-date>2013-08-11</signed-date>
+          </mandate>
+          <creditor-id>DE00000000000000000000</creditor-id>
+          <periodic>
+            <periodic-type>recurring</periodic-type>
+            <sequence-type>first</sequence-type>
+          </periodic>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 14:10:56 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1303'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>768e4b3e-3532-11e5-b074-005056a96a54</transaction-id><request-id>801dce0a-c18c-4327-b88a-00663b1bc37f</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T14:10:56.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>478E332B48</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Tue, 28 Jul 2015 14:10:56 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>b1aed725-efeb-4dca-aa25-02c1b8528ce0</request-id>
+          <transaction-type>debit</transaction-type>
+          <requested-amount currency="EUR">15.00</requested-amount>
+          <account-holder>
+            <first-name>Bob</first-name>
+            <last-name>Hawk</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <payment-methods>
+            <payment-method name="sepadirectdebit" />
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>2356789</mandate-id>
+            <signed-date>2013-08-11</signed-date>
+          </mandate>
+          <creditor-id>DE00000000000000000000</creditor-id>
+          <periodic>
+            <periodic-type>recurring</periodic-type>
+            <sequence-type>first</sequence-type>
+          </periodic>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 14:11:04 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1303'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>7b7d2b2e-3532-11e5-b074-005056a96a54</transaction-id><request-id>b1aed725-efeb-4dca-aa25-02c1b8528ce0</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T14:11:04.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>B4B5FEBDF7</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Tue, 28 Jul 2015 14:11:04 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>cb7dcce0-e286-4639-a4d7-dd258fbbea79</request-id>
+          <transaction-type>debit</transaction-type>
+          <requested-amount currency="EUR">15.00</requested-amount>
+          <account-holder>
+            <first-name>Bob</first-name>
+            <last-name>Hawk</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <payment-methods>
+            <payment-method name="sepadirectdebit" />
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>2356789</mandate-id>
+            <signed-date>2013-08-11</signed-date>
+          </mandate>
+          <creditor-id>DE00000000000000000000</creditor-id>
+          <periodic>
+            <periodic-type>recurring</periodic-type>
+            <sequence-type>first</sequence-type>
+          </periodic>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 14:11:38 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1303'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>8fb76104-3532-11e5-b074-005056a96a54</transaction-id><request-id>cb7dcce0-e286-4639-a4d7-dd258fbbea79</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T14:11:38.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>D63EC508A9</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Tue, 28 Jul 2015 14:11:38 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>b1a0d0d7-961b-4df8-9eb2-9c93dd165a2b</request-id>
+          <transaction-type>debit</transaction-type>
+          <requested-amount currency="EUR">15.00</requested-amount>
+          <account-holder>
+            <first-name>Bob</first-name>
+            <last-name>Hawk</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <payment-methods>
+            <payment-method name="sepadirectdebit" />
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>2356789</mandate-id>
+            <signed-date>2013-08-11</signed-date>
+          </mandate>
+          <creditor-id>DE00000000000000000000</creditor-id>
+          <periodic>
+            <periodic-type>recurring</periodic-type>
+            <sequence-type>first</sequence-type>
+          </periodic>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 14:14:27 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1303'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>f4b81c92-3532-11e5-b074-005056a96a54</transaction-id><request-id>b1a0d0d7-961b-4df8-9eb2-9c93dd165a2b</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T14:14:27.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>67B1D683F8</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Tue, 28 Jul 2015 14:14:28 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>28d00f56-489e-47dd-ae06-1c6d1b9aa588</request-id>
+          <transaction-type>debit</transaction-type>
+          <requested-amount currency="EUR">15.00</requested-amount>
+          <account-holder>
+            <first-name>Bob</first-name>
+            <last-name>Hawk</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <payment-methods>
+            <payment-method name="sepadirectdebit" />
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>2356789</mandate-id>
+            <signed-date>2013-08-11</signed-date>
+          </mandate>
+          <creditor-id>DE00000000000000000000</creditor-id>
+          <periodic>
+            <periodic-type>recurring</periodic-type>
+            <sequence-type>first</sequence-type>
+          </periodic>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 14:14:34 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1303'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>f8721856-3532-11e5-b074-005056a96a54</transaction-id><request-id>28d00f56-489e-47dd-ae06-1c6d1b9aa588</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T14:14:33.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>F14274FED1</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Tue, 28 Jul 2015 14:14:34 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>6a586fa3-87e7-47c8-89cf-a5dc9f438924</request-id>
+          <transaction-type>debit</transaction-type>
+          <requested-amount currency="EUR">15.00</requested-amount>
+          <account-holder>
+            <first-name>Bob</first-name>
+            <last-name>Hawk</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <payment-methods>
+            <payment-method name="sepadirectdebit" />
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>2356789</mandate-id>
+            <signed-date>2013-08-11</signed-date>
+          </mandate>
+          <creditor-id>DE00000000000000000000</creditor-id>
+          <periodic>
+            <periodic-type>recurring</periodic-type>
+            <sequence-type>first</sequence-type>
+          </periodic>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 14:14:38 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1303'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>fb334d3a-3532-11e5-b074-005056a96a54</transaction-id><request-id>6a586fa3-87e7-47c8-89cf-a5dc9f438924</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T14:14:38.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>1D2662703E</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Tue, 28 Jul 2015 14:14:39 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>4711</request-id>
+          <transaction-type>debit</transaction-type>
+          <requested-amount currency="EUR">15.00</requested-amount>
+          <account-holder>
+            <first-name>Bob</first-name>
+            <last-name>Hawk</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <payment-methods>
+            <payment-method name="sepadirectdebit" />
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>2356789</mandate-id>
+            <signed-date>2013-08-11</signed-date>
+          </mandate>
+          <creditor-id>DE00000000000000000000</creditor-id>
+          <periodic>
+            <periodic-type>recurring</periodic-type>
+            <sequence-type>first</sequence-type>
+          </periodic>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 14:15:47 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1251'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>2480929c-3533-11e5-b074-005056a96a54</transaction-id><request-id>4711</request-id><transaction-type>debit</transaction-type><transaction-state>failed</transaction-state><completion-time-stamp>2015-07-28T14:15:47.000Z</completion-time-stamp><statuses><status
+        code="400.1018" description="The same Request Id for the Merchant Account
+        is being tried a second time.  Please use another Request Id." severity="error"/></statuses><requested-amount
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Tue, 28 Jul 2015 14:15:48 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>9a19edc1-28ce-40fa-b666-e059a4189f8f</request-id>
+          <transaction-type>debit</transaction-type>
+          <requested-amount currency="EUR">15.00</requested-amount>
+          <account-holder>
+            <first-name>Bob</first-name>
+            <last-name>Hawk</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <payment-methods>
+            <payment-method name="sepadirectdebit" />
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>2356789</mandate-id>
+            <signed-date>2013-08-11</signed-date>
+          </mandate>
+          <creditor-id>DE00000000000000000000</creditor-id>
+          <periodic>
+            <periodic-type>recurring</periodic-type>
+            <sequence-type>first</sequence-type>
+          </periodic>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 14:17:07 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1303'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>53b06aec-3533-11e5-b074-005056a96a54</transaction-id><request-id>9a19edc1-28ce-40fa-b666-e059a4189f8f</request-id><transaction-type>debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T14:17:07.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">15.00</requested-amount><account-holder><first-name>Bob</first-name><last-name>Hawk</last-name></account-holder><order-number>666</order-number><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>2356789</mandate-id><signed-date>2013-08-11</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><periodic><periodic-type>recurring</periodic-type><sequence-type>first</sequence-type></periodic><provider-transaction-reference-id>BBDF0F31EE</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Tue, 28 Jul 2015 14:17:07 GMT
 recorded_with: VCR 2.9.3
