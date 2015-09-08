@@ -53,6 +53,10 @@ module WirecardSepa
         value_at 'provider-transaction-reference-id'
       end
 
+      def to_s
+        xml
+      end
+
       private
 
       # Returns the text of a node with the given position. If

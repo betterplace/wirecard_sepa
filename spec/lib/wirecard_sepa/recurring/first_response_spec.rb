@@ -35,4 +35,10 @@ describe WirecardSepa::Recurring::FirstResponse do
       expect(success_response.success?).to eq true
     end
   end
+
+  describe '#to_s' do
+    it 'returns the response body' do
+      expect(success_response.to_s).to eq success_response.xml
+    end
+  end
 end

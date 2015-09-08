@@ -69,4 +69,10 @@ describe WirecardSepa::DirectDebit::Response do
       expect(empty_response).not_to be_success
     end
   end
+
+  describe '#to_s' do
+    it 'returns the response body' do
+      expect(success_response.to_s).to eq success_response.xml
+    end
+  end
 end
