@@ -1,3 +1,7 @@
+## [0.1.1] - 2015-09-08
+### Changed
+- All response objects implement `to_s` which returns the actual response xml string
+
 ## [0.1.0] - 2015-08-05
 ### Changed
 - order_number is now a required parameter for recurring requests
