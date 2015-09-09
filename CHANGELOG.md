@@ -1,3 +1,8 @@
+## [0.1.2] - 2015-09-09
+### Fixed
+- Params for a debit return may now contain special chars without leading to a malformed XML doc.
+  E.g. having "&" or "<" in a param lead to a malformed XML doc.
+
 ## [0.1.1] - 2015-09-08
 ### Changed
 - All response objects implement `to_s` which returns the actual response xml string
