@@ -1,3 +1,5 @@
+require 'rexml/text'
+
 module WirecardSepa
   module Utils
     class Template
@@ -16,7 +18,7 @@ module WirecardSepa
 
       def request_params
         params_without_custom_fields.each_with_object({}) do |(k,v), h|
-          h["{{#{k.upcase}}}"] = v
+          h["{{#{k.upcase}}}"] = REXML::Text.new(v.to_s)
         end.merge('{{CUSTOM_FIELDS}}' => custom_fields_xml)
       end
 

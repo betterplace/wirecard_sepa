@@ -30,15 +30,22 @@ describe WirecardSepa::DirectDebit::Request do
   end
 
   describe '#to_xml' do
+    let(:xsd)    { Nokogiri::XML::Schema(read_support_file('payment.xsd')) }
+    let(:doc)    { Nokogiri::XML(subject.to_xml) { |config| config.strict } }
+    let(:errors) { xsd.validate(doc) }
+
     it 'builds the correct xml' do
       expected_xml = read_support_file('direct_debit/success/request_with_custom_fields.xml')
       expect(subject.to_xml).to eq expected_xml
     end
 
     it 'builds a valid request' do
-      xsd = Nokogiri::XML::Schema(read_support_file('payment.xsd'))
-      doc = Nokogiri::XML(subject.to_xml)
-      errors = xsd.validate(doc)
+      expect(errors).to be_empty
+    end
+
+    it 'can handle special chars' do
+      params[:account_holder_first_name] = 'Firma'
+      params[:account_holder_last_name]  = 'Muscle Line Poerschke © & Rez Gbr.'
       expect(errors).to be_empty
     end
   end
