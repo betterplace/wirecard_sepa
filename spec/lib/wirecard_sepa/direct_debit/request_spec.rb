@@ -45,7 +45,7 @@ describe WirecardSepa::DirectDebit::Request do
 
     it 'can handle special chars' do
       params[:account_holder_first_name] = 'Firma'
-      params[:account_holder_last_name]  = 'Muscle Line Poerschke © & Rez Gbr.'
+      params[:account_holder_last_name]  = 'Müller & Schmidt gGmbh'
       expect(errors).to be_empty
     end
   end
