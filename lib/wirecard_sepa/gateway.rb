@@ -38,13 +38,17 @@ module WirecardSepa
 
     private
 
+    # Wirecard API returns correct charset (UTF-8), but the resulting
+    # body is encoded in (ASCII-8BIT), so we enforce it.
     def post(request_xml)
-      Typhoeus.post(
+      response = Typhoeus.post(
         config.api_url,
         body: request_xml,
         userpwd: http_auth_credentials,
         headers: { 'Content-Type' => 'application/xml' }
       )
+      response.body.force_encoding response.headers['Content-Type'][/charset=(.*)/, 1]
+      response
     end
 
     def add_auth_params_and_custom_fields(params)
