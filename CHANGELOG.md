@@ -1,3 +1,7 @@
+## [0.1.3] - 2015-09-17
+### Fixed
+- Treat response body according to their given charset, normally UTF-8
+
 ## [0.1.2] - 2015-09-09
 ### Fixed
 - Params for a debit return may now contain special chars without leading to a malformed XML doc.
