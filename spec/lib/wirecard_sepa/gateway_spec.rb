@@ -33,13 +33,24 @@ describe WirecardSepa::Gateway do
 
     describe 'Handling weird wirecard HTTP responses' do
       let(:ascii_body) { 'test'.force_encoding(Encoding::ASCII_8BIT) }
-      let(:response) { Typhoeus::Response.new(code: 200, body: ascii_body, headers: { 'Content-Type' => 'text/html; charset=utf-8' }) }
-      before { allow(gateway).to receive(:typhoeus_response).and_return(response) }
+      let(:headers) { { 'Content-Type' => 'text/html; charset=utf-8' } }
+      let(:wirecard_response) { Typhoeus::Response.new(code: 200, body: ascii_body, headers: headers) }
+      before { allow(gateway).to receive(:typhoeus_response).and_return(wirecard_response) }
 
       it 'uses the Content-Type header to enforce the response.body encoding' do
         response = gateway.debit(debit_params)
         expect(response.xml).to eq 'test'
         expect(response.xml.encoding).to eq Encoding::UTF_8
+      end
+
+      context 'when wirecard forgets to set the Content-Type header' do
+        let(:headers) { Hash.new }
+
+        it 'does not fail nor change the encoding' do
+          response = gateway.debit(debit_params)
+          expect(response.xml).to eq 'test'
+          expect(response.xml.encoding).to eq Encoding::ASCII_8BIT
+        end
       end
     end
   end # describe

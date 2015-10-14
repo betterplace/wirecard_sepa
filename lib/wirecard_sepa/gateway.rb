@@ -42,7 +42,9 @@ module WirecardSepa
     # body is encoded in (ASCII-8BIT), so we enforce it.
     def post(request_xml)
       response = typhoeus_response(request_xml)
-      response.body.force_encoding response.headers['Content-Type'][/charset=(.*)/, 1]
+      if content_type = response.headers['Content-Type']
+        response.body.force_encoding content_type[/charset=(.*)/, 1]
+      end
       response
     end
 
