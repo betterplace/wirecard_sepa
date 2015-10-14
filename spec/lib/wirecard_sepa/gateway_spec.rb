@@ -30,6 +30,18 @@ describe WirecardSepa::Gateway do
         expect(response.transaction_id).to_not be_empty
       end
     end
+
+    describe 'Handling weird wirecard HTTP responses' do
+      let(:ascii_body) { 'test'.force_encoding(Encoding::ASCII_8BIT) }
+      let(:response) { Typhoeus::Response.new(code: 200, body: ascii_body, headers: { 'Content-Type' => 'text/html; charset=utf-8' }) }
+      before { allow(gateway).to receive(:typhoeus_response).and_return(response) }
+
+      it 'uses the Content-Type header to enforce the response.body encoding' do
+        response = gateway.debit(debit_params)
+        expect(response.xml).to eq 'test'
+        expect(response.xml.encoding).to eq Encoding::UTF_8
+      end
+    end
   end # describe
 
   describe '#recurring_init(params)' do
