@@ -8,134 +8,6 @@ http_interactions:
       string: |+
         <payment xmlns="http://www.elastic-payments.com/schema/payment">
           <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
-          <request-id>9a76c097-7acb-4544-b0e8-b0e18addc20f</request-id>
-          <transaction-type>pending-debit</transaction-type>
-          <requested-amount currency="EUR">12.12</requested-amount>
-          <account-holder>
-            <first-name>John</first-name>
-            <last-name>Doe</last-name>
-          </account-holder>
-          <order-number>666</order-number>
-          <custom-fields>
-            <custom-field field-name="Company Name" field-value="gut.org"/>
-          </custom-fields>
-          <payment-methods>
-            <payment-method name="sepadirectdebit"/>
-          </payment-methods>
-          <bank-account>
-            <iban>DE42512308000000060004</iban>
-            <bic>WIREDEMMXXX</bic>
-          </bank-account>
-          <mandate>
-            <mandate-id>1235678</mandate-id>
-            <signed-date>2013-09-24</signed-date>
-          </mandate>
-          <creditor-id>DE00000000000000000000</creditor-id>
-        </payment>
-
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-      Content-Type:
-      - application/xml
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Date:
-      - Tue, 28 Jul 2015 14:09:52 GMT
-      Content-Type:
-      - application/xml;charset=UTF-8
-      Content-Language:
-      - en-US
-      Content-Length:
-      - '1322'
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>5072d58c-3532-11e5-b074-005056a96a54</transaction-id><request-id>9a76c097-7acb-4544-b0e8-b0e18addc20f</request-id><transaction-type>pending-debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T14:09:52.000Z</completion-time-stamp><statuses><status
-        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
-        currency="EUR">12.12</requested-amount><account-holder><first-name>John</first-name><last-name>Doe</last-name></account-holder><order-number>666</order-number><custom-fields><custom-field
-        field-name="Company Name" field-value="gut.org"></custom-field></custom-fields><payment-methods><payment-method
-        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>1235678</mandate-id><signed-date>2013-09-24</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><provider-transaction-reference-id>F2FC4EBF5C</provider-transaction-reference-id></payment>
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
-  recorded_at: Tue, 28 Jul 2015 14:09:52 GMT
-- request:
-    method: post
-    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
-    body:
-      encoding: UTF-8
-      string: |+
-        <payment xmlns="http://www.elastic-payments.com/schema/payment">
-          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
-          <request-id>7afb3c42-f804-450e-ba5b-be5a0810e032</request-id>
-          <transaction-type>pending-debit</transaction-type>
-          <requested-amount currency="EUR">12.12</requested-amount>
-          <account-holder>
-            <first-name>John</first-name>
-            <last-name>Doe</last-name>
-          </account-holder>
-          <order-number>666</order-number>
-          <custom-fields>
-            <custom-field field-name="Company Name" field-value="gut.org"/>
-          </custom-fields>
-          <payment-methods>
-            <payment-method name="sepadirectdebit"/>
-          </payment-methods>
-          <bank-account>
-            <iban>DE42512308000000060004</iban>
-            <bic>WIREDEMMXXX</bic>
-          </bank-account>
-          <mandate>
-            <mandate-id>1235678</mandate-id>
-            <signed-date>2013-09-24</signed-date>
-          </mandate>
-          <creditor-id>DE00000000000000000000</creditor-id>
-        </payment>
-
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-      Content-Type:
-      - application/xml
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Date:
-      - Tue, 28 Jul 2015 14:10:55 GMT
-      Content-Type:
-      - application/xml;charset=UTF-8
-      Content-Language:
-      - en-US
-      Content-Length:
-      - '1322'
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>75db2446-3532-11e5-b074-005056a96a54</transaction-id><request-id>7afb3c42-f804-450e-ba5b-be5a0810e032</request-id><transaction-type>pending-debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2015-07-28T14:10:54.000Z</completion-time-stamp><statuses><status
-        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
-        currency="EUR">12.12</requested-amount><account-holder><first-name>John</first-name><last-name>Doe</last-name></account-holder><order-number>666</order-number><custom-fields><custom-field
-        field-name="Company Name" field-value="gut.org"></custom-field></custom-fields><payment-methods><payment-method
-        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>1235678</mandate-id><signed-date>2013-09-24</signed-date></mandate><creditor-id>DE00000000000000000000</creditor-id><due-date>2015-07-31</due-date><provider-transaction-reference-id>A1588D27BE</provider-transaction-reference-id></payment>
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
-  recorded_at: Tue, 28 Jul 2015 14:10:55 GMT
-- request:
-    method: post
-    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
-    body:
-      encoding: UTF-8
-      string: |+
-        <payment xmlns="http://www.elastic-payments.com/schema/payment">
-          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
           <request-id>0c4c36ac-1f57-4f3e-829e-23a23d99aaa0</request-id>
           <transaction-type>pending-debit</transaction-type>
           <requested-amount currency="EUR">12.12</requested-amount>
@@ -705,4 +577,132 @@ http_interactions:
     adapter_metadata:
       effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
   recorded_at: Wed, 14 Oct 2015 11:43:03 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>438f189e-4543-4584-9d3a-5873ba4b6014</request-id>
+          <transaction-type>pending-debit</transaction-type>
+          <requested-amount currency="EUR">12.12</requested-amount>
+          <account-holder>
+            <first-name>John</first-name>
+            <last-name>Doe</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <custom-fields>
+            <custom-field field-name="Company Name" field-value="gut.org"/>
+          </custom-fields>
+          <payment-methods>
+            <payment-method name="sepadirectdebit"/>
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>1235678</mandate-id>
+            <signed-date>2013-09-24</signed-date>
+          </mandate>
+          <creditor-id>DE98ZZZ09999999999</creditor-id>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 28 Jan 2016 11:50:08 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1318'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>475efdc2-c5b5-11e5-b3b3-005056a96a54</transaction-id><request-id>438f189e-4543-4584-9d3a-5873ba4b6014</request-id><transaction-type>pending-debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2016-01-28T11:50:08.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">12.12</requested-amount><account-holder><first-name>John</first-name><last-name>Doe</last-name></account-holder><order-number>666</order-number><custom-fields><custom-field
+        field-name="Company Name" field-value="gut.org"></custom-field></custom-fields><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>1235678</mandate-id><signed-date>2013-09-24</signed-date></mandate><creditor-id>DE98ZZZ09999999999</creditor-id><due-date>2016-02-02</due-date><provider-transaction-reference-id>C2F1EBE18F</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Thu, 28 Jan 2016 11:50:08 GMT
+- request:
+    method: post
+    uri: https://api-test.wirecard.com/engine/rest/paymentmethods/
+    body:
+      encoding: UTF-8
+      string: |+
+        <payment xmlns="http://www.elastic-payments.com/schema/payment">
+          <merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id>
+          <request-id>3dd0ec88-520b-4642-84b4-9b5d39870725</request-id>
+          <transaction-type>pending-debit</transaction-type>
+          <requested-amount currency="EUR">12.12</requested-amount>
+          <account-holder>
+            <first-name>John</first-name>
+            <last-name>Doe</last-name>
+          </account-holder>
+          <order-number>666</order-number>
+          <custom-fields>
+            <custom-field field-name="Company Name" field-value="gut.org"/>
+          </custom-fields>
+          <payment-methods>
+            <payment-method name="sepadirectdebit"/>
+          </payment-methods>
+          <bank-account>
+            <iban>DE42512308000000060004</iban>
+            <bic>WIREDEMMXXX</bic>
+          </bank-account>
+          <mandate>
+            <mandate-id>1235678</mandate-id>
+            <signed-date>2013-09-24</signed-date>
+          </mandate>
+          <creditor-id>DE98ZZZ09999999999</creditor-id>
+        </payment>
+
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 28 Jan 2016 11:50:31 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1318'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><payment xmlns="http://www.elastic-payments.com/schema/payment"><merchant-account-id>4c901196-eff7-411e-82a3-5ef6b6860d64</merchant-account-id><transaction-id>54d943d6-c5b5-11e5-b3b3-005056a96a54</transaction-id><request-id>3dd0ec88-520b-4642-84b4-9b5d39870725</request-id><transaction-type>pending-debit</transaction-type><transaction-state>success</transaction-state><completion-time-stamp>2016-01-28T11:50:31.000Z</completion-time-stamp><statuses><status
+        code="201.0000" description="The resource was successfully created." severity="information"/></statuses><requested-amount
+        currency="EUR">12.12</requested-amount><account-holder><first-name>John</first-name><last-name>Doe</last-name></account-holder><order-number>666</order-number><custom-fields><custom-field
+        field-name="Company Name" field-value="gut.org"></custom-field></custom-fields><payment-methods><payment-method
+        name="sepadirectdebit"/></payment-methods><bank-account><iban>DE42512308000000060004</iban><bic>WIREDEMMXXX</bic></bank-account><mandate><mandate-id>1235678</mandate-id><signed-date>2013-09-24</signed-date></mandate><creditor-id>DE98ZZZ09999999999</creditor-id><due-date>2016-02-02</due-date><provider-transaction-reference-id>47ED4896F8</provider-transaction-reference-id></payment>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api-test.wirecard.com/engine/rest/paymentmethods/
+  recorded_at: Thu, 28 Jan 2016 11:50:31 GMT
+recorded_with: VCR 3.0.1
