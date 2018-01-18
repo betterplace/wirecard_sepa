@@ -26,7 +26,7 @@ module WirecardSepa
       end
 
       def success?
-        status_code == '201.0000'
+        transaction_state == 'success'
       end
 
       def transaction_id
