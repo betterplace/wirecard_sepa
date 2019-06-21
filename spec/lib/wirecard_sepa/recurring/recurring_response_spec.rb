@@ -27,6 +27,7 @@ describe WirecardSepa::Recurring::RecurringResponse do
       it('params[:status_description]') { expect(params[:status_description]).to eq 'The resource was successfully created.' }
       it('params[:due_date]')           { expect(params[:due_date]).to eq '2014-01-02' }
       it('params[:reference_id]')       { expect(params[:reference_id]).to eq '6A11C85484' }
+      it('params[:requested_amount]')   { expect(params[:requested_amount]).to eq '20.02' }
     end
   end
 

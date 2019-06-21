@@ -8,6 +8,7 @@ describe WirecardSepa::Recurring::RecurringRequest do
       request_id:            '55566dbf-c68c-4f4e-a14b-69db83fbd555',
       parent_transaction_id: 'e6604f91-663c-11e3-a07b-18037336c0b3',
       order_number:          '12345',
+      requested_amount:      '20.02',
     }
   end
 

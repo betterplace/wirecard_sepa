@@ -15,7 +15,7 @@ module WirecardSepa
       private
 
       def expected_params
-        %i( merchant_account_id request_id parent_transaction_id order_number )
+        %i( merchant_account_id request_id parent_transaction_id order_number requested_amount)
       end
     end
   end

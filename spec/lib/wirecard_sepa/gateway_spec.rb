@@ -1,7 +1,5 @@
 require 'spec_helper'
 
-# TODOs
-# [x] Record response from wirecard w/ VCR
 describe WirecardSepa::Gateway do
   let(:gateway) { described_class.new(sandbox_gateway_config) }
 
@@ -23,12 +21,10 @@ describe WirecardSepa::Gateway do
     end
 
     it 'posts the correct XML' do
-      VCR.use_cassette 'gateway.debit' do
-        response = gateway.debit(debit_params)
-        expect(response).to be_success
-        expect(response.params).to_not be_empty
-        expect(response.transaction_id).to_not be_empty
-      end
+      response = gateway.debit(debit_params)
+      expect(response).to be_success
+      expect(response.params).to_not be_empty
+      expect(response.transaction_id).to_not be_empty
     end
 
     describe 'Handling weird wirecard HTTP responses' do
@@ -70,12 +66,10 @@ describe WirecardSepa::Gateway do
     end
 
     it 'posts the correct XML' do
-      VCR.use_cassette 'gateway.recurring_init' do
-        response = gateway.recurring_init(recurring_init_params)
-        expect(response).to be_success
-        expect(response.params).to_not be_empty
-        expect(response.transaction_id).to_not be_empty
-      end
+      response = gateway.recurring_init(recurring_init_params)
+      expect(response).to be_success
+      expect(response.params).to_not be_empty
+      expect(response.transaction_id).to_not be_empty
     end
   end # describe
 
@@ -94,19 +88,15 @@ describe WirecardSepa::Gateway do
     end
 
     let(:parent_transaction_id) do
-      VCR.use_cassette 'gateway.recurring_process/init' do
-        init_response = gateway.recurring_init(recurring_init_params)
-        init_response.transaction_id
-      end
+      init_response = gateway.recurring_init(recurring_init_params)
+      init_response.transaction_id
     end
 
     it 'posts the correct XML' do
-      VCR.use_cassette 'gateway.recurring_process' do
-        response = gateway.recurring_process({ parent_transaction_id: parent_transaction_id, order_number: 667 })
-        expect(response).to be_success
-        expect(response.params).to_not be_empty
-        expect(response.transaction_id).to_not be_empty
-      end
+      response = gateway.recurring_process({ parent_transaction_id: parent_transaction_id, order_number: 667, requested_amount: 20.02 })
+      expect(response).to be_success
+      expect(response.params).to_not be_empty
+      expect(response.transaction_id).to_not be_empty
     end
-  end # describe
+  end
 end
