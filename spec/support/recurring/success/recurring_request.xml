@@ -2,6 +2,7 @@
   <merchant-account-id>eefc804c-f9d3-43a8-bd15-a1c92de10000</merchant-account-id>
   <request-id>55566dbf-c68c-4f4e-a14b-69db83fbd555</request-id>
   <transaction-type>debit</transaction-type>
+  <requested-amount currency="EUR">20.02</requested-amount>
   <parent-transaction-id>e6604f91-663c-11e3-a07b-18037336c0b3</parent-transaction-id>
   <order-number>12345</order-number>
   <payment-methods>

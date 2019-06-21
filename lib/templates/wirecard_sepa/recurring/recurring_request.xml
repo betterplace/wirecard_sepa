@@ -2,6 +2,7 @@
   <merchant-account-id>{{MERCHANT_ACCOUNT_ID}}</merchant-account-id>
   <request-id>{{REQUEST_ID}}</request-id>
   <transaction-type>debit</transaction-type>
+  <requested-amount currency="EUR">{{REQUESTED_AMOUNT}}</requested-amount>
   <parent-transaction-id>{{PARENT_TRANSACTION_ID}}</parent-transaction-id>
   <order-number>{{ORDER_NUMBER}}</order-number>
   <payment-methods>

@@ -102,7 +102,7 @@ describe WirecardSepa::Gateway do
 
     it 'posts the correct XML' do
       VCR.use_cassette 'gateway.recurring_process' do
-        response = gateway.recurring_process({ parent_transaction_id: parent_transaction_id, order_number: 667 })
+        response = gateway.recurring_process({ parent_transaction_id: parent_transaction_id, order_number: 667, requested_amount: 20.02 })
         expect(response).to be_success
         expect(response.params).to_not be_empty
         expect(response.transaction_id).to_not be_empty

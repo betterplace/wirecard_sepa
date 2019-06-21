@@ -22,6 +22,7 @@ module WirecardSepa
           due_date:              due_date,
           reference_id:          provider_transaction_reference_id,
           original_response_xml: xml,
+          requested_amount:      requested_amount
         }
       end
 
@@ -47,6 +48,10 @@ module WirecardSepa
 
       def due_date
         value_at 'due-date'
+      end
+
+      def requested_amount
+        value_at 'requested-amount'
       end
 
       def provider_transaction_reference_id
