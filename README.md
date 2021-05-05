@@ -1,4 +1,7 @@
-# Wirecard SEPA
+# UNMAINTAINED BECAUSE WIRECARD IS BANKRUPT
+
+
+## Wirecard SEPA
 [![Build Status](https://api.travis-ci.org/betterplace/wirecard_sepa.svg?branch=master)](http://travis-ci.org/betterplace/wirecard_sepa)
 [![Code Climate](https://codeclimate.com/repos/55494936e30ba04e91005d6e/badges/cd0d22df220babab1b66/gpa.svg)](https://codeclimate.com/repos/55494936e30ba04e91005d6e/feed)
 [![Dependency Status](https://gemnasium.com/betterplace/wirecard_sepa.svg)](https://gemnasium.com/betterplace/wirecard_sepa)
